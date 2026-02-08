@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Go To Site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  font-family:Arial, sans-serif;
+}
+
+/* PAGE 1 (image screen) */
+#page1{
+  position:fixed;
+  inset:0;
+  cursor:pointer;
+}
+#page1 img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+#go{
+  position:absolute;
+  bottom:30px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+  font-size:26px;
+}
+
+/* PAGE 2 (ads/links) */
+#page2{
+  display:none;
+}
+.ad{
+  height:30vh;
+}
+iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1">
+  <img src="https://your-image-link.com/image.jpg">
+  <div id="go">GO TO SITE</div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2">
+
+  <div class="ad"><iframe src="https://link1.com"></iframe></div>
+  <div class="ad"><iframe src="https://link2.com"></iframe></div>
+  <div class="ad"><iframe src="https://link3.com"></iframe></div>
+  <div class="ad"><iframe src="https://link4.com"></iframe></div>
+  <div class="ad"><iframe src="https://link5.com"></iframe></div>
+  <div class="ad"><iframe src="https://link6.com"></iframe></div>
+  <div class="ad"><iframe src="https://link7.com"></iframe></div>
+  <div class="ad"><iframe src="https://link8.com"></iframe></div>
+  <div class="ad"><iframe src="https://link9.com"></iframe></div>
+  <div class="ad"><iframe src="https://link10.com"></iframe></div>
+
+</div>
+
+<script>
+  // One click generates impressions for all links together
+  document.getElementById("page1").onclick = function(){
+    this.style.display = "none";
+    document.getElementById("page2").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
